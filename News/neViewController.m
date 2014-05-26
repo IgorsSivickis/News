@@ -7,6 +7,7 @@
 //
 
 #import "neViewController.h"
+#import "neImageCell.h"
 
 @interface neViewController ()
 
@@ -35,8 +36,8 @@
 {
     static NSString *const CellId = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
-   // cell.textLabel.text = @"123";
+    neImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
+    cell.celltextLabel.text = @"123";
     return  cell;
 }
 

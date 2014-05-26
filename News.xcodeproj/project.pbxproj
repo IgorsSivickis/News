@@ -21,6 +21,10 @@
 		5EA8973D19334D53003C6F08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA8971F19334D52003C6F08 /* UIKit.framework */; };
 		5EA8974519334D53003C6F08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8974319334D53003C6F08 /* InfoPlist.strings */; };
 		5EA8974719334D53003C6F08 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8974619334D53003C6F08 /* NewsTests.m */; };
+		5EA897521933669B003C6F08 /* neImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA897511933669B003C6F08 /* neImageCell.m */; };
+		5EA8975519336A3B003C6F08 /* neData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8975419336A3B003C6F08 /* neData.m */; };
+		5EA8975819336E41003C6F08 /* 1_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8975619336E41003C6F08 /* 1_img.jpg */; };
+		5EA8975919336E41003C6F08 /* 2_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8975719336E41003C6F08 /* 2_img.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		5EA8974219334D53003C6F08 /* NewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewsTests-Info.plist"; sourceTree = "<group>"; };
 		5EA8974419334D53003C6F08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EA8974619334D53003C6F08 /* NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTests.m; sourceTree = "<group>"; };
+		5EA897501933669B003C6F08 /* neImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neImageCell.h; sourceTree = "<group>"; };
+		5EA897511933669B003C6F08 /* neImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neImageCell.m; sourceTree = "<group>"; };
+		5EA8975319336A3B003C6F08 /* neData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neData.h; sourceTree = "<group>"; };
+		5EA8975419336A3B003C6F08 /* neData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neData.m; sourceTree = "<group>"; };
+		5EA8975619336E41003C6F08 /* 1_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_img.jpg; sourceTree = "<group>"; };
+		5EA8975719336E41003C6F08 /* 2_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2_img.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +125,12 @@
 				5EA8972A19334D52003C6F08 /* neAppDelegate.h */,
 				5EA8972B19334D52003C6F08 /* neAppDelegate.m */,
 				5EA8972D19334D52003C6F08 /* Main.storyboard */,
+				5EA897501933669B003C6F08 /* neImageCell.h */,
+				5EA897511933669B003C6F08 /* neImageCell.m */,
 				5EA8973019334D52003C6F08 /* neViewController.h */,
 				5EA8973119334D52003C6F08 /* neViewController.m */,
+				5EA8975319336A3B003C6F08 /* neData.h */,
+				5EA8975419336A3B003C6F08 /* neData.m */,
 				5EA8973319334D52003C6F08 /* Images.xcassets */,
 				5EA8972219334D52003C6F08 /* Supporting Files */,
 			);
@@ -127,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				5EA8972319334D52003C6F08 /* News-Info.plist */,
+				5EA8975619336E41003C6F08 /* 1_img.jpg */,
+				5EA8975719336E41003C6F08 /* 2_img.jpg */,
 				5EA8972419334D52003C6F08 /* InfoPlist.strings */,
 				5EA8972719334D52003C6F08 /* main.m */,
 				5EA8972919334D52003C6F08 /* News-Prefix.pch */,
@@ -230,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA8973419334D52003C6F08 /* Images.xcassets in Resources */,
+				5EA8975919336E41003C6F08 /* 2_img.jpg in Resources */,
+				5EA8975819336E41003C6F08 /* 1_img.jpg in Resources */,
 				5EA8972619334D52003C6F08 /* InfoPlist.strings in Resources */,
 				5EA8972F19334D52003C6F08 /* Main.storyboard in Resources */,
 			);
@@ -252,6 +270,8 @@
 			files = (
 				5EA8972819334D52003C6F08 /* main.m in Sources */,
 				5EA8972C19334D52003C6F08 /* neAppDelegate.m in Sources */,
+				5EA8975519336A3B003C6F08 /* neData.m in Sources */,
+				5EA897521933669B003C6F08 /* neImageCell.m in Sources */,
 				5EA8973219334D52003C6F08 /* neViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
