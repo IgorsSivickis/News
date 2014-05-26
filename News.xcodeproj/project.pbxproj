@@ -25,6 +25,7 @@
 		5EA8975519336A3B003C6F08 /* neData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8975419336A3B003C6F08 /* neData.m */; };
 		5EA8975819336E41003C6F08 /* 1_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8975619336E41003C6F08 /* 1_img.jpg */; };
 		5EA8975919336E41003C6F08 /* 2_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8975719336E41003C6F08 /* 2_img.jpg */; };
+		5EA8975C193376EE003C6F08 /* neDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8975B193376EE003C6F08 /* neDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		5EA8975419336A3B003C6F08 /* neData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neData.m; sourceTree = "<group>"; };
 		5EA8975619336E41003C6F08 /* 1_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_img.jpg; sourceTree = "<group>"; };
 		5EA8975719336E41003C6F08 /* 2_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2_img.jpg; sourceTree = "<group>"; };
+		5EA8975A193376EE003C6F08 /* neDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neDetailViewController.h; sourceTree = "<group>"; };
+		5EA8975B193376EE003C6F08 /* neDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = neDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				5EA8972A19334D52003C6F08 /* neAppDelegate.h */,
 				5EA8972B19334D52003C6F08 /* neAppDelegate.m */,
 				5EA8972D19334D52003C6F08 /* Main.storyboard */,
+				5EA8975A193376EE003C6F08 /* neDetailViewController.h */,
+				5EA8975B193376EE003C6F08 /* neDetailViewController.m */,
 				5EA897501933669B003C6F08 /* neImageCell.h */,
 				5EA897511933669B003C6F08 /* neImageCell.m */,
 				5EA8973019334D52003C6F08 /* neViewController.h */,
@@ -270,6 +275,7 @@
 			files = (
 				5EA8972819334D52003C6F08 /* main.m in Sources */,
 				5EA8972C19334D52003C6F08 /* neAppDelegate.m in Sources */,
+				5EA8975C193376EE003C6F08 /* neDetailViewController.m in Sources */,
 				5EA8975519336A3B003C6F08 /* neData.m in Sources */,
 				5EA897521933669B003C6F08 /* neImageCell.m in Sources */,
 				5EA8973219334D52003C6F08 /* neViewController.m in Sources */,

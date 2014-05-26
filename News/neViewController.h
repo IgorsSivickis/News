@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface neViewController : UIViewController
-<UITableViewDataSource>
+@interface neViewController : UIViewController <UITableViewDataSource>
+{
+    NSArray *_data;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

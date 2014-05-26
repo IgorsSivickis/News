@@ -8,6 +8,8 @@
 
 #import "neViewController.h"
 #import "neImageCell.h"
+#import "neData.h"
+#import "neDetailViewController.h"
 
 @interface neViewController ()
 
@@ -19,6 +21,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.title = @"News";
+    _data = [neData fetchData];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,7 +35,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_data count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -37,8 +43,22 @@
     static NSString *const CellId = @"Cell";
     
     neImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
-    cell.celltextLabel.text = @"123";
+    
+    neData *item = [_data objectAtIndex:indexPath.row];
+    cell.celltextLabel.text = item.title;
+    cell.cellImageCell.image = [UIImage imageNamed:item.imageName];
     return  cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if (indexPath){
+        neData *item = [_data objectAtIndex:indexPath.row];
+        [segue.destinationViewController setDetail:item];
+    }
+   
 }
 
 @end

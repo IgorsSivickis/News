@@ -30,8 +30,8 @@
     item.title = @"sgdertgdf";
     item.author = @"hjertkhjk";
     item.createdOn = @"irtyutyrtytyt";
-    item.text = @"tdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdlk yuy";
-    item.imageName = @"1_img.jpg";
+    item.text = @"tdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdkfjd lkjdlkrtyrtytrg jdl j glkdjg ldkgj ldkg jdlkg d jgdlk yuy";
+    item.imageName = @"2_img.jpg";
     [result addObject:item];
     
     return result;
