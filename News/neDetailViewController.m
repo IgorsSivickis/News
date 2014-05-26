@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +39,23 @@
 -(void)setDetail:(neData *)detail
 {
     _detail = detail;
-    NSLog(@"%@",detail.title);
+}
+
+-(void)reloadData
+{
+    if (!_detail){
+        return;
+    }
+    self.navigationItem.title = _detail.category;
+    
+    self.titleLabel.text = _detail.title;
+    self.imageView.image = [UIImage imageNamed:_detail.imageName];
+    self.textView.text = _detail.text;
+    
+    CGRect contentViewFrame = _contentView.frame;
+    contentViewFrame.size.height = _textView.contentSize.height - _textView.frame.size.height;
+    _contentView.frame = contentViewFrame;
+    _scrollView.contentSize = _contentView.frame.size;
 }
 
 @end
