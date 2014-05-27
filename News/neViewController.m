@@ -10,6 +10,7 @@
 #import "neImageCell.h"
 #import "neDetailViewController.h"
 #import "RSSParser.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface neViewController ()
 
@@ -28,15 +29,14 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [RSSParser parseRSSFeedForRequest:request
                               success:^(NSArray *feedItems) {
-                                  for (RSSItem *item in feedItems){
-                                      NSLog(@"%@",item.title);
-                                  }
+                                  _data = feedItems;
+                                  [self.tableView reloadData];
+                                  
                               }
                               failure:^(NSError *error){
                                   NSLog(@"%@", error);
                               }];
     
-    _data = [neData fetchData];
     
 }
 
@@ -62,9 +62,16 @@
     
     neImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
     
-    neData *item = [_data objectAtIndex:indexPath.row];
+    RSSItem *item = [_data objectAtIndex:indexPath.row];
     cell.celltextLabel.text = item.title;
-    cell.cellImageCell.image = [UIImage imageNamed:item.imageName];
+    
+    NSArray *images = [item imagesFromContent];
+    
+    if ([images count]>0){
+        NSString *imageURLString = [images objectAtIndex:0];
+        NSURL *imageURL = [NSURL URLWithString:imageURLString];
+        [cell.cellImageCell setImageWithURL:imageURL];
+    }
     return  cell;
 }
 
@@ -73,7 +80,7 @@
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     if (indexPath){
-        neData *item = [_data objectAtIndex:indexPath.row];
+        RSSItem *item = [_data objectAtIndex:indexPath.row];
         [segue.destinationViewController setDetail:item];
     }
    

@@ -7,6 +7,7 @@
 //
 
 #import "neDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface neDetailViewController ()
 
@@ -50,8 +51,15 @@
     }
     
     self.titleLabel.text = _detail.title;
-    self.imageView.image = [UIImage imageNamed:_detail.imageName];
     self.textView.text = _detail.itemDescription;
+    
+    NSArray *images = [_detail imagesFromContent];
+    
+    if ([images count]>0){
+        NSString *imageURLString = [images objectAtIndex:0];
+        NSURL *imageURL = [NSURL URLWithString:imageURLString];
+        [self.imageView setImageWithURL:imageURL];
+    }
     
     CGRect contentViewFrame = _contentView.frame;
     contentViewFrame.size.height = _textView.contentSize.height - _textView.frame.size.height;
