@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface neViewController : UIViewController <UITableViewDataSource>
+@interface neViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSArray *_data;
 }

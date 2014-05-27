@@ -51,6 +51,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="dik-rN-41N"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Ufm-om-dHa"/>
                                 </connections>
                             </tableView>
                         </subviews>
