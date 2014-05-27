@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"Some news";
     [self reloadData];
 }
 
@@ -36,7 +38,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setDetail:(neData *)detail
+-(void)setDetail:(RSSItem *)detail
 {
     _detail = detail;
 }
@@ -46,11 +48,10 @@
     if (!_detail){
         return;
     }
-    self.navigationItem.title = _detail.category;
     
     self.titleLabel.text = _detail.title;
     self.imageView.image = [UIImage imageNamed:_detail.imageName];
-    self.textView.text = _detail.text;
+    self.textView.text = _detail.itemDescription;
     
     CGRect contentViewFrame = _contentView.frame;
     contentViewFrame.size.height = _textView.contentSize.height - _textView.frame.size.height;

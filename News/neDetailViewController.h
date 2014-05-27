@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "neData.h"
+#import "RSSItem.h"
+
 
 @interface neDetailViewController : UIViewController
 
-@property (nonatomic, strong) neData *detail;
+@property (nonatomic, strong) RSSItem *detail;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

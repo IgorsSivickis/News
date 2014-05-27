@@ -8,8 +8,8 @@
 
 #import "neViewController.h"
 #import "neImageCell.h"
-#import "neData.h"
 #import "neDetailViewController.h"
+#import "RSSParser.h"
 
 @interface neViewController ()
 
@@ -23,6 +23,19 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.title = @"News";
+    
+    NSURL *url = [NSURL URLWithString:@"http://itdox.ru/feed"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [RSSParser parseRSSFeedForRequest:request
+                              success:^(NSArray *feedItems) {
+                                  for (RSSItem *item in feedItems){
+                                      NSLog(@"%@",item.title);
+                                  }
+                              }
+                              failure:^(NSError *error){
+                                  NSLog(@"%@", error);
+                              }];
+    
     _data = [neData fetchData];
     
 }
